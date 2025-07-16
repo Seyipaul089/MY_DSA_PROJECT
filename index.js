@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import connectDb from "./config/Mongodb.js";
 import AuthRoutes from "./routes/AuthRoutes.js";
-import ProfileRoutes from "./routes/profileroutes.js";
+import ProfileRoutes from "./routes/profileRoutes.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config(); 
