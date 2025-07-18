@@ -13,6 +13,14 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser())
+
+const allowOrigin = ["https://my-dsaprj-frontend.vercel.app/", "http://localhost:5174/"]
+app.use(cors({
+    origin:"",
+    credentials:true,
+    methods:["POST", "GET", "PUT", "DELETE"],
+    allowedHeaders:["content-type", "Authorization"]
+}))
 app.use("/api/auth/", AuthRoutes);
 app.use("/api/Profile", ProfileRoutes);
 //connecting to database
